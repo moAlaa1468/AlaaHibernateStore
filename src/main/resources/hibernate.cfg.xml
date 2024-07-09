@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/store_java</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="current_session_context_class">thread</property>
+
+        <!-- List of annotated classes -->
+        <mapping class="moh.amer.alaahibernatestore.entity.Address"/>
+        <mapping class="moh.amer.alaahibernatestore.entity.Branch"/>
+        <mapping class="moh.amer.alaahibernatestore.entity.Brand"/>
+        <mapping class="moh.amer.alaahibernatestore.entity.Cart"/>
+        <mapping class="moh.amer.alaahibernatestore.entity.Category"/>
+        <mapping class="moh.amer.alaahibernatestore.entity.City"/>
+        <mapping class="moh.amer.alaahibernatestore.entity.Customer"/>
+        <mapping class="moh.amer.alaahibernatestore.entity.ProductSize"/>
+        <mapping class="moh.amer.alaahibernatestore.entity.Product"/>
+        <mapping class="moh.amer.alaahibernatestore.entity.Size"/>
+        <mapping class="moh.amer.alaahibernatestore.entity.Zone"/>
+    </session-factory>
+</hibernate-configuration>
